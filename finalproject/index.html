@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Your Origin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" media="all"/>
+    <link rel="stylesheet" href="css/print.css" media="print"/>
+<style>
+
+</style>
+<script>
+	var Image = new Array("media/honorable.png", "media/villanous.png", "media/neutral.png", "media/unknown.png")
+	var ImageNum=0;
+	var ImageLength=Image.length - 1;
+	function changeImage(number){
+		ImageNum = ImageNum + number;
+		if (ImageNum > ImageLength)
+			ImageNum=0;
+		if (ImageNum < 0 )
+			ImageNum=ImageLength;
+		
+		document.getElementById("mySlides").src = Image[ImageNum];
+		return;
+	}
+</script>
+</head>
+<body class="center">
+	<header class="col-12 col-m-12 " >
+		<h1>Choose your Origin</h1>
+    </header>
+
+    <article class="row">
+        <nav  class="col-3 col-m-3">
+       <h2>Links</h2> 
+	   <ul>
+			<li><a href="../Lesson5/theStart.html">Start</a></li>
+			<li><a href="../Lesson11/myResponsivePage.html">Role Info</a></li>
+			<li><a href="../Lesson8/characterSheetVer.2.html">Character</a></li>
+			<li><a href="../Lesson7/rpg-multimedia.html">Beginning</a></li>
+		</ul>       
+	   </nav>
+	   <section class="col-5 col-m-5">
+		   <p>Choose the Type of Nation of your Origin: 
+		   <br>
+		   <br>Honorable: Known for holding moral highground on several issues. Hostile to Villanous
+		   <br>
+		   <br>Villanous: Acknowleged for their deceptive conduct in all lands. Hositle to Honorable.
+		   <br>
+		   <br>Neutral: A secluded nation that refrains from conflict. Hostile to none.
+		   <br>
+		   <br>Unaligned: You have no nation, you wander between the main three.  Can join either.
+		</p>
+	   </section>
+   
+	   <section  class="col-4 col-m-4"> 
+	   <p style="text-align:center;"><button type="button" id="previous" onclick="changeImage(-1)">Previous</button>
+			<button type="button" id="next" onclick="changeImage(1)">Next</button>
+			</p>
+			 <p style="text-align:center;"><img alt="photo slideshow" id="mySlides" src="media/honorable.png" style="width:100%;padding:10%;
+			 background:#444; box-shadow:5px 5px white;"></p>
+	   </section>
+	   </article>
+   <footer class="col-12 col-m-12">
+		<div class="icon-bar">
+				<a href="https://www.linkedin.com/in/deven-roush-b737a6180/?trk=hp-identity-name"><i class="fa fa-linkedin-square"></i></a>
+			</div>
+    <p>&copy; NMC, Deven Roush</p>
+</footer>
+</body>
+</html>
